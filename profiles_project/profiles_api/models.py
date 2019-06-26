@@ -31,7 +31,7 @@ class UserProfileManager(PermissionsMixin):
 
 class UserProfile(AbstractBaseUser, PermissionsMixin):
     """database model for users in the system"""
-    email = model.EmailField(max_length=255, unique=True)
+    email = models.EmailField(max_length=255, unique=True)
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
     # ^^^ this allows us to 'deactivate' accounts from use in the future (if desired)
