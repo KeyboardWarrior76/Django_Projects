@@ -22,8 +22,8 @@ class UserProfileManager(PermissionsMixin):
     def create_superuser(self, email, name, password):
         """create new superuser"""
         user = self.create_user(email, name, password)
-        user.is_superuser = True;
-        user.is_staff = True;
+        user.is_superuser = True
+        user.is_staff = True
         user.save(using=self._db)
 
         return user
