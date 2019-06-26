@@ -30,7 +30,7 @@ class UserProfileManager(PermissionsMixin):
 
 
 class UserProfile(AbstractBaseUser, PermissionsMixin):
-    """database model for users in the system"""
+    """custom user model for authentication"""
     email = models.EmailField(max_length=255, unique=True)
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
