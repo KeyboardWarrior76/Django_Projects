@@ -19,7 +19,7 @@ class UserProfileManager(PermissionsMixin):
 
         return user
 
-    def create_super_user(self, email, name, password):
+    def create_superuser(self, email, name, password):
         """create new superuser"""
         user = self.create_user(email, name, password)
         user.is_superuser = True;
